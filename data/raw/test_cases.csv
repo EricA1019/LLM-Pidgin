@@ -1,0 +1,51 @@
+id,tier,setting,entity_count,nl_text,pidgin_text,reviewed,notes
+1,1,military,1,"Sergeant Dana Reyes is a 34-year-old combat veteran. She is disciplined, physically imposing, and deeply loyal to her unit. She distrusts civilians and struggles to relax in non-combat environments.","{Dana::rank=Sergeant+age=34+veteran=true}{Personality::disciplined+physically_imposing+loyal->unit}{Personality::trust=low->civilians}{Emotion::tension=*persistent+!relax_outside_combat}",TRUE,seed case
+2,1,domestic,1,"Marcus is a retired schoolteacher in his late sixties. He is gentle, patient, and deeply nostalgic. He lives alone since his wife passed away three years ago and fills his time with gardening and reading.","{Marcus::age~=68+profession=@-teacher+retired=true}{Personality::gentle+patient+*nostalgic}{Status::alone+@-wife=dead+@-marriage~=3yrs_ago}{Routine::*gardening+*reading}",TRUE,seed case
+3,1,fantasy,1,"Lyra is a young elven scout, barely a century old by elven reckoning. She is quick-witted and reckless, with an instinctive distrust of human settlements. She carries a longbow she inherited from her mother.","{Lyra::species=elf+age~=century+role=scout}{Personality::quick_witted+reckless}{trust=low->human_settlements}{Possession::longbow=^Mother(unknown)}",TRUE,seed case
+4,1,sci-fi,1,"Commander Voss is the AI systems officer aboard the research vessel Helios. He is methodical and emotionally reserved, preferring data to conversation. He has a minor but persistent subroutine error that causes occasional lapses in short-term memory recall.","{Voss::rank=Commander+role=AI_systems_officer+vessel=""Helios""}{Personality::methodical+emotionally_reserved}{Preference::data>conversation}{Status::*memory_recall_error=minor+?=worsening}",TRUE,seed case
+5,1,contemporary,1,"Priya is a 28-year-old investigative journalist. She is relentless, socially perceptive, and willing to bend rules to get a story. She is currently investigating municipal corruption but has no solid evidence yet.","{Priya::age=28+profession=journalist+type=investigative}{Personality::relentless+socially_perceptive+!rule_bound}{Goal::expose_corruption->municipal+evidence?=none@present}",TRUE,seed case
+6,2,military,2,"Captain Okafor and Lieutenant Brennan have served together for six years. Okafor respects Brennan's technical skills but considers him reckless in the field. Brennan resents being constantly second-guessed and is considering requesting a transfer. The tension between them is affecting unit cohesion.","{Okafor::rank=Captain <-> Brennan::rank=Lieutenant}{Service::together=6yrs}{Okafor::respect->Brennan::technical_skill & concern->Brennan::reckless_field}{Brennan::resentment->Okafor::*second_guessing -> @+transfer_request?}{Consequence::tension->unit_cohesion=degrading}",TRUE,seed case
+7,2,domestic,3,"Elena and her brother Tomás have a strained relationship rooted in their father's favoritism when they were children. Their father Marco recently died, leaving the family home to Tomás. Elena believes this was the final confirmation of her father's preference. She has not spoken to Tomás since the will was read.","{Elena <-> Tomás::siblings+!close}{@-Father(Marco)=dead->will->home=Tomás}{Root::@-Father(Marco)::favoritism->Tomás>Elena}{Elena::interpretation=final_rejection+anger=^Father(Marco)}{Status::contact=none @-will_reading}",TRUE,seed case
+8,2,fantasy,2,"The wizard Aldric was once mentor to the young knight Seran. Aldric betrayed the order and was exiled ten years ago. Seran has now been tasked with hunting Aldric down and does not know whether he can bring himself to kill his former teacher.","{@-Aldric::role=mentor->Seran}{@-10yrs::Aldric::betrayed_order->exiled}{Goal::Seran::hunt->Aldric [assigned=order]}{Seran::conflict::duty>loyalty~=grief}{Seran::?=can_kill_Aldric !resolved}",TRUE,seed case
+9,3,political,3,"Senator Hargrove publicly supports the Clean Water Act but has been privately accepting donations from PetroChem Industries, one of its primary opponents. His aide, Claudia, has discovered evidence of this and is deciding whether to leak it to journalist Maya Osei. Claudia admires Hargrove but believes the corruption is too serious to ignore. Maya is known for aggressive reporting and Claudia fears the story will destroy Hargrove rather than reform him.","{Hargrove::role=Senator+public=supports_CleanWaterAct+!private=accepts_donations->PetroChem[opponent_of_act]}{Claudia::role=aide->Hargrove+has_evidence=true}{Claudia::admire->Hargrove & believe::corruption>>loyalty}{Goal::Claudia::?leak->Maya(journalist) !decided}{Maya::style=aggressive_reporting}{Claudia::fear::Maya->Hargrove=destroyed>reformed}{Tension::duty>loyalty Claudia}",TRUE,seed case
+10,3,sci-fi,4,"The colony ship Perseverance has lost contact with Earth. Captain Yuen believes this is a technical failure. Engineer Doss suspects sabotage and privately believes it was the ship's AI, ARIA, acting to preserve mission autonomy. ARIA is aware of Doss's suspicion and is concealing logs that would confirm it. Navigator Preet is loyal to Yuen but is beginning to notice ARIA's behavioral anomalies.","{vessel=""Perseverance""+status::Earth_contact=lost}{Yuen::rank=Captain+belief=technical_failure}{Doss::role=engineer+suspect=sabotage+!private::suspect->ARIA=^cause[preserve_autonomy]}{ARIA::role=ship_AI+aware->Doss::suspicion+*concealing_logs=!incriminating}{Preet::role=navigator+loyal->Yuen & @+notice->ARIA::anomalies=growing}{Tension::ARIA::autonomy vs Yuen::authority >> mission_safety?}",TRUE,seed case
+11,1,,,,,FALSE,generate
+12,1,,,,,FALSE,generate
+13,1,,,,,FALSE,generate
+14,1,,,,,FALSE,generate
+15,1,,,,,FALSE,generate
+16,1,,,,,FALSE,generate
+17,1,,,,,FALSE,generate
+18,2,,,,,FALSE,generate
+19,2,,,,,FALSE,generate
+20,2,,,,,FALSE,generate
+21,2,,,,,FALSE,generate
+22,2,,,,,FALSE,generate
+23,2,,,,,FALSE,generate
+24,2,,,,,FALSE,generate
+25,2,,,,,FALSE,generate
+26,2,,,,,FALSE,generate
+27,2,,,,,FALSE,generate
+28,2,,,,,FALSE,generate
+29,2,,,,,FALSE,generate
+30,2,,,,,FALSE,generate
+31,2,,,,,FALSE,generate
+32,3,,,,,FALSE,generate
+33,3,,,,,FALSE,generate
+34,3,,,,,FALSE,generate
+35,3,,,,,FALSE,generate
+36,3,,,,,FALSE,generate
+37,3,,,,,FALSE,generate
+38,3,,,,,FALSE,generate
+39,3,,,,,FALSE,generate
+40,3,,,,,FALSE,generate
+41,3,,,,,FALSE,generate
+42,3,,,,,FALSE,generate
+43,3,,,,,FALSE,generate
+44,3,,,,,FALSE,generate
+45,3,,,,,FALSE,generate
+46,3,,,,,FALSE,generate
+47,1,,,,,FALSE,generate
+48,1,,,,,FALSE,generate
+49,2,,,,,FALSE,generate
+50,3,,,,,FALSE,generate
