@@ -23,10 +23,15 @@ docs/              # Design notes, pidgin grammar rules
 
 ## Quick Start
 
-1. Add input texts to `data/raw/`.
-2. Use `prompts/gpt4_generation_prompt.md` to generate pidgin versions.
-3. Evaluate with `scripts/evaluate_fidelity.py`:
+```bash
+pip install -r requirements.txt
+```
+
+1. Use `prompts/gpt4_generation_prompt.md` in a GPT-4.1 session to generate test cases IDs 11–50 as CSV rows.
+2. Save the seed + generated cases as `data/raw/test_cases.csv` (columns: `id, tier, setting, entity_count, nl_text, pidgin_text, reviewed, notes`).
+3. Run the token compression benchmark:
    ```bash
-   python scripts/evaluate_fidelity.py results/run_001.jsonl
+   python scripts/token_counter.py --input data/raw/test_cases.csv --output results/
    ```
-4. Log findings in `experiments/` using the template.
+4. Results land in `results/`: raw counts, summary CSVs, and plots.
+5. Log findings in `experiments/` using `experiments/experiment_template.md`.
